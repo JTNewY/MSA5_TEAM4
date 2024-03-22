@@ -1,4 +1,4 @@
-package com.team4;
+package com.test;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import com.test.DAO.JDBConnection;
 
 /**
  * JavaFX App
@@ -32,6 +34,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        JDBConnection jdbc = new JDBConnection();
         launch();
     }
 
