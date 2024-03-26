@@ -34,10 +34,11 @@ CREATE TABLE BOARD(
     requires java.sql;
 
 4. JDBC 연동 - JDBConnection.java
-```
+
 5. 게시판 프로그램의 Model 재사용
     - (DAO,DTO, Service)
 
 6. View (fxml)
  - 게시글 목록 : TableView
- 7. 
+
+ 7. Controller
