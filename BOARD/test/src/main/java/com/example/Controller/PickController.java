@@ -17,14 +17,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListController implements Initializable {
+public class PickController implements Initializable {
+    
     @FXML
     public TableView<Board> boardTableView;
     
     @FXML
-    public TableColumn<Board, Integer> colNo;
+    public TextField<Board, Integer> pickNo;
     @FXML
     public TableColumn<Board, String> colTitle;
     @FXML
@@ -32,36 +35,32 @@ public class ListController implements Initializable {
     @FXML
     public TableColumn<Board, String> colRegDate;
     @FXML
-    public TableColumn<Board, String> colView;
+    public TextArea<Board, String> content;
 
     private BoardService boardService = new BoardServiceImpl();
 
     
     @FXML
-    void moveToInsert(ActionEvent event) throws IOException {
-        App.setRoot("board/Insert");
+    void moveToPick(ActionEvent event) throws IOException {
+        App.setRoot("board/pick");
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // 게시글 목록 조회
-        List<Board> boardList = boardService.list();
+        Board board = boardService.select(no);
 
-        colNo.setCellValueFactory( new PropertyValueFactory<>("No"));
 		colTitle.setCellValueFactory( new PropertyValueFactory<>("Title"));
 		colWriter.setCellValueFactory( new PropertyValueFactory<>("Writer"));
 		colRegDate.setCellValueFactory( new PropertyValueFactory<>("RegDate"));
-		colView.setCellValueFactory( new PropertyValueFactory<>("View"));
+		content.setCellValueFactory( new PropertyValueFactory<>("View"));
 		
 		// 테이블뷰에 데이터 추가하기
 		ObservableList<Board> list = FXCollections.observableArrayList(
-            boardList
+            board
 		);
 		
 		boardTableView.setItems(list);
-
-        // 더블 클릭
-        
     }
     
 }
