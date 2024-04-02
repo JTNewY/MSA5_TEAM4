@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.SerchController">
+   <children>
+      <VBox layoutX="104.0" layoutY="144.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="63.0" text="글번호">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="63.0" text="작성자">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="제목">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="187.0" layoutY="142.0" prefHeight="107.0" prefWidth="339.0">
+         <children>
+            <TextField fx:id="tfNo" prefHeight="22.0" prefWidth="322.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField editable="false" fx:id="tfWriter" prefHeight="22.0" prefWidth="322.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField editable="false" fx:id="tfTitle" prefHeight="29.0" prefWidth="637.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <TextArea editable="false" fx:id="tfContent" layoutX="104.0" layoutY="266.0" prefHeight="272.0" prefWidth="719.0" />
+      <TilePane alignment="CENTER" prefHeight="125.0" prefWidth="927.0" style="-fx-background-color: #1717;" AnchorPane.rightAnchor="0.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="search" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </TilePane>
+      <Button contentDisplay="CENTER" layoutX="745.0" layoutY="551.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #1717;" text="목록" textFill="WHITE" />
+      <Button contentDisplay="CENTER" layoutX="539.0" layoutY="144.0" mnemonicParsing="false" onAction="#find" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #1717;" text="조회" textFill="WHITE" />
+   </children>
+</AnchorPane>

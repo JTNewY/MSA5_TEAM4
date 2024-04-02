@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.DeleteController">
+   <children>
+      <Label layoutX="104.0" layoutY="202.0" prefHeight="25.0" prefWidth="63.0" text="작성자">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="249.0" text="제목">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tWriter" layoutX="187.0" layoutY="200.0" prefHeight="22.0" prefWidth="322.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tTitle" layoutX="187.0" layoutY="247.0" prefHeight="29.0" prefWidth="637.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="tContent" layoutX="104.0" layoutY="291.0" prefHeight="272.0" prefWidth="719.0" />
+      <TilePane alignment="CENTER" prefHeight="125.0" prefWidth="927.0" style="-fx-background-color: #1717;" AnchorPane.rightAnchor="0.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="delete" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </TilePane>
+      <Button contentDisplay="CENTER" layoutX="745.0" layoutY="578.0" mnemonicParsing="false" onAction="#delete" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #1717;" text="삭제 " textFill="WHITE" />
+      <Button contentDisplay="CENTER" layoutX="656.0" layoutY="578.0" mnemonicParsing="false" onAction="#update" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #1717;" text="수정" textFill="WHITE" />
+      <Label layoutX="62.0" layoutY="159.0" prefHeight="25.0" prefWidth="111.0" text="게시글번호">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tNo" layoutX="187.0" layoutY="157.0" prefHeight="29.0" prefWidth="63.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button contentDisplay="CENTER" layoutX="107.0" layoutY="576.0" mnemonicParsing="false" onAction="#moveToList" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #1717;" text="목록" textFill="WHITE" />
+   </children>
+</AnchorPane>

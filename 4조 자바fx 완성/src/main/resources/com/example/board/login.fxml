@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="927.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.Logincontroll">
+   <children>
+      <Pane cache="true" layoutX="199.0" layoutY="214.0" prefHeight="308.0" prefWidth="529.0" style="-fx-background-color: #2222;">
+         <children>
+            <TextField fx:id="idField" layoutX="163.0" layoutY="84.0" prefHeight="38.0" prefWidth="272.0" promptText="ID" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="pwField2" layoutX="163.0" layoutY="143.0" onKeyTyped="#passwordFieldKeyTyped" prefHeight="38.0" prefWidth="272.0" promptText="Password" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="100.0" layoutY="89.0" text="ID">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="147.0" text="PW">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="LoginBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="236.0" mnemonicParsing="false" onAction="#LoginBtnPressed" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #89b989;" text="Login" textFill="WHITE" />
+            <Button fx:id="regField" layoutX="278.0" layoutY="236.0" mnemonicParsing="false" onAction="#moveToInsert" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #333;" text="Register" textFill="WHITE" />
+            <CheckBox fx:id="ShownPW" layoutX="163.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleOptions" text="Shown Password" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="129.0" layoutY="37.0" prefHeight="18.0" prefWidth="272.0" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="pwField" layoutX="163.0" layoutY="143.0" prefHeight="38.0" prefWidth="272.0" promptText="Password" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+      <TilePane alignment="CENTER" prefHeight="125.0" prefWidth="927.0" style="-fx-background-color: #1717;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Login" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </TilePane>
+   </children>
+</AnchorPane>
